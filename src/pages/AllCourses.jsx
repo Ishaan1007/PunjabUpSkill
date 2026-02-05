@@ -18,7 +18,11 @@ export default function AllCourses({ query }) {
           return (
             <div key={c.id} className="w-full">
               {href ? (
-                <a href={href} aria-label={`Open ${c.title} on YouTube`} className="block">
+                <a
+                  href={href}
+                  aria-label={`Open ${c.title} on YouTube`}
+                  className="block"
+                >
                   <img src={thumb} alt={c.title} className="w-full h-40 object-cover rounded-md" />
                 </a>
               ) : (

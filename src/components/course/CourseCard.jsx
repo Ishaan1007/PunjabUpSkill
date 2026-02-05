@@ -14,7 +14,7 @@ export default function CourseCard({ course }) {
   const href = id ? `https://www.youtube.com/watch?v=${id}` : null
 
   const card = (
-    <div className="w-72 bg-[var(--card-bg)] rounded-xl p-3 shadow-md hover:scale-[1.02] transform transition">
+    <div className="w-64 sm:w-72 bg-[var(--card-bg)] rounded-xl p-3 shadow-md hover:scale-[1.02] transform transition">
       <img src={thumb} alt={course.title} className="w-full h-36 object-cover rounded-md" />
       <div className="mt-3">
         <h3 className="font-semibold text-lg">{course.title}</h3>
@@ -25,7 +25,13 @@ export default function CourseCard({ course }) {
 
   if (href) {
     return (
-      <a href={href} className="hover:opacity-95" aria-label={`Open ${course.title} on YouTube`}>{card}</a>
+      <a
+        href={href}
+        className="hover:opacity-95"
+        aria-label={`Open ${course.title} on YouTube`}
+      >
+        {card}
+      </a>
     )
   }
 
