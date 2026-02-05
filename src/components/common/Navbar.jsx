@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import SearchBar from './SearchBar'
+import { withBase } from '../../utils/assets'
 
 export default function Navbar({ onSearch, query }) {
   const loc = useLocation()
@@ -9,7 +10,7 @@ export default function Navbar({ onSearch, query }) {
       <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
-            <img src="/logo-symbol.svg" alt="logo" className="w-12 h-12" />
+            <img src={withBase('logo-symbol.svg')} alt="logo" className="w-12 h-12" />
             <div className="text-2xl font-extrabold text-white">PunjabUpSkill</div>
           </div>
           <nav className="hidden md:flex items-center gap-3">

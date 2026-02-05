@@ -1,10 +1,11 @@
 import React from 'react'
 import { getYoutubeId } from '../../utils/youtube'
+import { withBase } from '../../utils/assets'
 
 function getThumbnail(course) {
   const id = getYoutubeId(course.youtubeId)
   if (id) return `https://img.youtube.com/vi/${id}/hqdefault.jpg`
-  return course.thumbnail || '/images/thumbnails/placeholder.jpg'
+  return withBase(course.thumbnail || 'images/thumbnails/placeholder.jpg')
 }
 
 export default function CourseCard({ course }) {

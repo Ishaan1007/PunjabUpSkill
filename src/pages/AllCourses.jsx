@@ -3,6 +3,7 @@ import { courses } from '../data/courses'
 import CourseRow from '../components/course/CourseRow'
 import { filterCourses } from '../utils/filterCourses'
 import { getYoutubeId } from '../utils/youtube'
+import { withBase } from '../utils/assets'
 
 export default function AllCourses({ query }) {
   const filtered = filterCourses(courses, query)
@@ -12,7 +13,7 @@ export default function AllCourses({ query }) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {filtered.map(c => {
           const id = getYoutubeId(c.youtubeId)
-          const thumb = id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : c.thumbnail
+          const thumb = id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : withBase(c.thumbnail)
           const href = id ? `https://www.youtube.com/watch?v=${id}` : null
           return (
             <div key={c.id} className="w-full">
