@@ -3,5 +3,8 @@ export const categories = [
   'Web Development',
   'Python',
   'DSA',
-  'Node Js'
+  'Node Js',
+  'C++',
+  'UI/UX Design',
+  'Data Science',
 ]
