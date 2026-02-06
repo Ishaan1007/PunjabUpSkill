@@ -3,6 +3,7 @@ export function filterCourses(courses, query) {
   const q = query.toLowerCase()
   return courses.filter(c =>
     c.title.toLowerCase().includes(q) ||
-    (c.category && c.category.toLowerCase().includes(q))
+    (c.category && c.category.toLowerCase().includes(q)) ||
+    (c.type && c.type.toLowerCase().includes(q))
   )
 }
