@@ -16,7 +16,7 @@ export default function Navbar({ onSearch, query }) {
               className="w-full h-full object-cover object-center"
             />
           </div>
-          <div className="text-2xl font-extrabold text-white">PunjabUpSkill</div>
+          <div className="text-2xl font-extrabold text-white">PunjabSkillUp</div>
         </div>
 
         <div className="flex items-center gap-4 w-full md:w-auto order-2 md:order-3">

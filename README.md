@@ -1,4 +1,4 @@
-# PunjabUpSkill - Frontend Demo
+# PunjabSkillUp - Frontend Demo
 
 React + Vite + Tailwind demo of a dark-themed course platform UI.
 
